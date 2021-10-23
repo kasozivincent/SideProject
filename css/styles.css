@@ -556,9 +556,13 @@ pre {
 }
 
 /*Mobile*/
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .navbar {
-    height: auto;
+    height: 110px;
+  }
+  
+  .navbar nav{
+    margin-bottom: 20px:
   }
 
   .navbar .flex {
