@@ -1,0 +1,572 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+:root {
+  --primaryColor: #047aed;
+  --secondary-color: #1c3fa8;
+  --dark-color: #002240;
+  --light-color: #f4f4f4;
+  --success-color: #5cb85c;
+  --error-color: #d9534f;
+}
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration-line: none;
+  color: #333;
+}
+
+/*navbar*/
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar a {
+  color: #fff;
+  margin: 0 5px;
+  padding: 10px;
+}
+
+.navbar a:hover {
+  border-bottom: #fff solid 2px;
+}
+
+h1,
+h2 {
+  line-height: 1.2;
+  margin: 20px 0;
+  font-weight: 300px;
+}
+
+p {
+  margin: 20px 0;
+}
+
+img {
+  width: 100%;
+}
+
+code,
+pre {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+.navbar {
+  background-color: var(--primaryColor);
+  color: #fff;
+  height: 80px;
+}
+
+.navbar .flex {
+  justify-content: space-between;
+}
+
+/*showcase*/
+.showcase {
+  background-color: var(--primaryColor);
+  height: 400px;
+  color: #fff;
+  position: relative;
+}
+
+.showcase p {
+  margin: 20px 0;
+}
+
+.showcase h1 {
+  font-size: 40px;
+}
+
+.showcase .grid {
+  grid-template-columns: 55% 45%;
+  overflow: visible;
+  gap: 20px;
+}
+
+.showcase-form .form-control {
+  margin: 30px 0;
+}
+
+.showcase-form input:focus {
+  outline: none;
+}
+
+.showcase-form input[type="text"],
+.showcase-form input[type="email"] {
+  border: 0;
+  border-bottom: 1px #b4becb solid;
+  padding: 3px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.showcase-text {
+  animation: leftslide 1s ease-in;
+}
+
+.showcase-form {
+  position: relative;
+  top: 60px;
+  width: 400px;
+  padding: 40px;
+  justify-self: flex-end;
+  height: 350px;
+}
+
+.showcase::before,
+.showcase::after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  bottom: -70px;
+  right: 0;
+  left: 0;
+  background: #fff;
+  transform: skewY(-3deg);
+}
+
+/*stats*/
+.stats {
+  padding-top: 100px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.stats-heading {
+  max-width: 500px;
+  margin: auto;
+}
+
+.stats .grid p {
+  font-size: 30px;
+}
+
+.stats .grid p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/*Cloud*/
+
+.cloud .grid {
+  grid-template-columns: 4fr 3fr;
+}
+
+/*languages*/
+
+.languages .card {
+  text-align: center;
+  margin: 18px 10px 40px;
+  transition: transform 0.2s ease-in;
+}
+
+.languages .flex {
+  flex-wrap: wrap;
+}
+
+.languages .card img {
+  height: 100px;
+  width: 100px;
+}
+
+.languages .card:hover {
+  transform: translateY(-15px);
+}
+
+/*--------------------------------------------Features-----------------------------------------------------*/
+.features-head img,
+.docs-head img {
+  width: 120px;
+  height: 120px;
+  justify-self: flex-end;
+}
+
+.features-head-sub img {
+  width: 200px;
+  height: 200px;
+  justify-self: flex-end;
+}
+
+.features-main .card > i {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.features-main .grid *:first-child {
+  grid-column: 1 / span 3;
+}
+
+.features-main .grid *:nth-child(2) {
+  grid-column: 1 / span 2;
+}
+
+/*-------------------------------------------------------docs-------------------------------------------------*/
+.docs-main h3 {
+  margin: 20px 0;
+}
+
+.docs-main .grid {
+  grid-template-columns: 1fr 2fr;
+  align-items: flex-start;
+}
+
+.docs-main nav li {
+  font-size: 17px;
+  border-bottom: 1px #ccc solid;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+
+.docs-main a:hover {
+  font-weight: bold;
+}
+
+/*-------------------------------------------------------footer------------------------------------------------*/
+.footer .social a {
+  margin: 0 10px;
+}
+
+/*--------------------------------------------------alert class------------------------------------------------*/
+.alert {
+  background-color: var(--light-color);
+  margin: 15px 0;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+.alert i {
+  margin-right: 10px;
+}
+
+.alert-success {
+  background-color: var(--success-color);
+  color: #fff;
+}
+/*-------------------------------------------------Utilities--------------------------------------------------*/
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.size {
+  height: 200%;
+  width: 100%;
+}
+.btn {
+  color: #fff;
+  cursor: pointer;
+  background: var(--primaryColor);
+  border-radius: 5px;
+  border: none;
+  padding: 10px 30px;
+  display: inline-block;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px #fff solid;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px;
+  color: #333;
+  z-index: 100;
+}
+.container {
+  max-width: 1100px;
+  margin: 0px auto;
+  overflow: auto;
+  padding: 0 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+}
+
+.cli .grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.cli .grid > *:first-child {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.my-1 {
+  margin: 1rem 0;
+}
+
+.my-2 {
+  margin: 1.5rem 0;
+}
+
+.my-3 {
+  margin: 2rem 0;
+}
+
+.my-4 {
+  margin: 3rem 0;
+}
+
+.my-5 {
+  margin: 4rem 0;
+}
+
+.m-1 {
+  margin: 1rem;
+}
+
+.m-2 {
+  margin: 1.5rem;
+}
+
+.m-3 {
+  margin: 2rem;
+}
+
+.m-4 {
+  margin: 3rem;
+}
+
+.m-5 {
+  margin: 4rem;
+}
+
+.py-1 {
+  padding: 1rem 0;
+}
+
+.py-2 {
+  padding: 1.5rem 0;
+}
+
+.py-3 {
+  padding: 2rem 0;
+}
+
+.py-4 {
+  padding: 3rem 0;
+}
+
+.py-5 {
+  padding: 4rem 0;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 1.5rem;
+}
+
+.p-3 {
+  padding: 2rem;
+}
+
+.p-4 {
+  padding: 3rem;
+}
+
+.p-5 {
+  padding: 4rem;
+}
+
+.bg-primary,
+.btn-primary {
+  background-color: var(--primaryColor);
+  color: #fff;
+}
+
+.bg-secondary,
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.bg-light,
+.btn-light {
+  background-color: var(--light-color);
+  color: #333;
+}
+
+.bg-dark,
+.btn-dark {
+  background-color: var(--dark-color);
+  color: #fff;
+}
+
+.bg-primary a,
+.btn-primary a,
+.bg-secondary a,
+.btn-secondary a,
+.bg-light a,
+.btn-light a,
+.bg-dark a,
+.btn-dark a {
+  color: #fff;
+}
+
+.lead {
+  font-size: 20px;
+}
+
+.sm {
+  font-size: 1rem;
+}
+
+.md {
+  font-size: 2rem;
+}
+
+.lg {
+  font-size: 3rem;
+}
+
+.xl {
+  font-size: 4rem;
+}
+
+/*Animations*/
+@keyframes leftslide {
+  0% {
+    transform: translateX(-100);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rightslide {
+  0% {
+    transform: translateX(100);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes topslide {
+  0% {
+    transform: translateY(-100);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes bottomslide {
+  0% {
+    transform: translateY(100);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+/*Tablet and under*/
+@media (max-width: 765px) {
+  .grid,
+  .showcase .grid,
+  .stats .grid,
+  .cli .grid,
+  .cloud .grid,
+  .features-main .grid,
+  .docs-main .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .showcase {
+    height: auto;
+  }
+
+  .showcase-text {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .showcase-form {
+    justify-self: center;
+    margin: auto;
+  }
+
+  .cli .grid > *:first-child {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .features-head,
+  .features-head-sub,
+  .docs-head {
+    text-align: center;
+  }
+
+  .features-head img,
+  .features-head-sub img,
+  .docs-head img {
+    justify-self: center;
+  }
+
+  .features-main .grid > *:first-child,
+  .features-main .grid > *:nth-child(2) {
+    grid-column: 1;
+  }
+}
+
+/*Mobile*/
+@media (max-width: 500px) {
+  .navbar {
+    height: 110px;
+  }
+
+  .navbar .flex {
+    flex-direction: column;
+  }
+
+  .navbar ul {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
